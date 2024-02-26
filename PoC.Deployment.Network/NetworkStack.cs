@@ -53,8 +53,8 @@ public class NetworkStack : Stack
         .In(rgp)
         .WithAddressPrefixes(Prefixes[Context.Current.Environment])
         .WithSubnets(Subnets[Context.Current.Environment])
-        .WithRouteTable(routeTable.Resource)
-        .WithNetworkSecurityGroup(nsg.Resource)
+        .WithRouteTable(routeTable)
+        .WithNetworkSecurityGroup(nsg)
         .DisableProtection()
         .Build();
     }

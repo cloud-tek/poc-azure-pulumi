@@ -32,11 +32,20 @@ public class VirtualNetworkBuilder : AzureResourceBuilder<VirtualNetwork>
     SubNets = subnets;
     return this;
   }
+  public VirtualNetworkBuilder WithNetworkSecurityGroup((ResourceGroup ResourceGroup, NetworkSecurityGroup Resource) nsg)
+  {
+    return WithNetworkSecurityGroup(nsg.Resource);
+  }
 
   public VirtualNetworkBuilder WithNetworkSecurityGroup(NetworkSecurityGroup nsg)
   {
     Nsg = nsg;
     return this;
+  }
+
+  public VirtualNetworkBuilder WithRouteTable((ResourceGroup ResourceGroup, RouteTable Resource) table)
+  {
+    return WithRouteTable(table.Resource);
   }
 
   public VirtualNetworkBuilder WithRouteTable(RouteTable table)
