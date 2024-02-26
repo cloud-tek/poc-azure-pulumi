@@ -1,0 +1,12 @@
+/Users/mmisztal/Checkout/@cloud-tek/poc-pulumi/PoC.Azure/bin/Debug/net6.0/PoC.Azure.deps.json
+/Users/mmisztal/Checkout/@cloud-tek/poc-pulumi/PoC.Azure/bin/Debug/net6.0/PoC.Azure.dll
+/Users/mmisztal/Checkout/@cloud-tek/poc-pulumi/PoC.Azure/bin/Debug/net6.0/PoC.Azure.pdb
+/Users/mmisztal/Checkout/@cloud-tek/poc-pulumi/PoC.Azure/obj/Debug/net6.0/PoC.Azure.csproj.AssemblyReference.cache
+/Users/mmisztal/Checkout/@cloud-tek/poc-pulumi/PoC.Azure/obj/Debug/net6.0/PoC.Azure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mmisztal/Checkout/@cloud-tek/poc-pulumi/PoC.Azure/obj/Debug/net6.0/PoC.Azure.AssemblyInfoInputs.cache
+/Users/mmisztal/Checkout/@cloud-tek/poc-pulumi/PoC.Azure/obj/Debug/net6.0/PoC.Azure.AssemblyInfo.cs
+/Users/mmisztal/Checkout/@cloud-tek/poc-pulumi/PoC.Azure/obj/Debug/net6.0/PoC.Azure.csproj.CoreCompileInputs.cache
+/Users/mmisztal/Checkout/@cloud-tek/poc-pulumi/PoC.Azure/obj/Debug/net6.0/PoC.Azure.dll
+/Users/mmisztal/Checkout/@cloud-tek/poc-pulumi/PoC.Azure/obj/Debug/net6.0/refint/PoC.Azure.dll
+/Users/mmisztal/Checkout/@cloud-tek/poc-pulumi/PoC.Azure/obj/Debug/net6.0/PoC.Azure.pdb
+/Users/mmisztal/Checkout/@cloud-tek/poc-pulumi/PoC.Azure/obj/Debug/net6.0/ref/PoC.Azure.dll

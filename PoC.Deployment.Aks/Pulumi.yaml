@@ -1,0 +1,3 @@
+name: PoC.Deployment.Aks
+runtime: dotnet
+description: A minimal Azure Native C# Pulumi program

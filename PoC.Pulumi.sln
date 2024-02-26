@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.Azure", "PoC.Azure\PoC.Azure.csproj", "{9CACC80F-2152-44B4-A4A3-54F5CE2A6701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.Deployment.Aks", "PoC.Deployment.Aks\PoC.Deployment.Aks.csproj", "{E77E042C-1FD5-47E7-97C1-3C3ED13B3870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.Deployment.Storage", "PoC.Deployment.Storage\PoC.Deployment.Storage.csproj", "{446D354E-55E0-4DE0-9076-7B9DEC5BAA12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.Deployment.Network", "PoC.Deployment.Network\PoC.Deployment.Network.csproj", "{72D2DD15-DF25-4872-8CA2-515372B368B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.Azure.Tests", "PoC.Azure.Tests\PoC.Azure.Tests.csproj", "{9BCF8983-3E79-41CA-A472-A64EDEFE27E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.Deployment.KeyVault", "PoC.Deployment.KeyVault\PoC.Deployment.KeyVault.csproj", "{7147431C-9B7D-4126-8E3C-AB6169952FC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CACC80F-2152-44B4-A4A3-54F5CE2A6701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CACC80F-2152-44B4-A4A3-54F5CE2A6701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CACC80F-2152-44B4-A4A3-54F5CE2A6701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CACC80F-2152-44B4-A4A3-54F5CE2A6701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E77E042C-1FD5-47E7-97C1-3C3ED13B3870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77E042C-1FD5-47E7-97C1-3C3ED13B3870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77E042C-1FD5-47E7-97C1-3C3ED13B3870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77E042C-1FD5-47E7-97C1-3C3ED13B3870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{446D354E-55E0-4DE0-9076-7B9DEC5BAA12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446D354E-55E0-4DE0-9076-7B9DEC5BAA12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{446D354E-55E0-4DE0-9076-7B9DEC5BAA12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{446D354E-55E0-4DE0-9076-7B9DEC5BAA12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72D2DD15-DF25-4872-8CA2-515372B368B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D2DD15-DF25-4872-8CA2-515372B368B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D2DD15-DF25-4872-8CA2-515372B368B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D2DD15-DF25-4872-8CA2-515372B368B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BCF8983-3E79-41CA-A472-A64EDEFE27E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BCF8983-3E79-41CA-A472-A64EDEFE27E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BCF8983-3E79-41CA-A472-A64EDEFE27E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BCF8983-3E79-41CA-A472-A64EDEFE27E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7147431C-9B7D-4126-8E3C-AB6169952FC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7147431C-9B7D-4126-8E3C-AB6169952FC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7147431C-9B7D-4126-8E3C-AB6169952FC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7147431C-9B7D-4126-8E3C-AB6169952FC6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

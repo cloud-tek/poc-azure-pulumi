@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=43f55cca_002D0270_002D4edd_002D9cb6_002D0dfce5b697cd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::9BCF8983-3E79-41CA-A472-A64EDEFE27E4::net6.0::PoC.Azure.Tests.ContextTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::9BCF8983-3E79-41CA-A472-A64EDEFE27E4::net6.0::PoC.Azure.Tests.ResourceBuilderTests.X&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::9BCF8983-3E79-41CA-A472-A64EDEFE27E4::net6.0::PoC.Azure.Tests.ResourceBuilderTests.XGivenResourceGroupBuilder_WhenNoContext_ThenThrowsInvalidOperationException&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::9BCF8983-3E79-41CA-A472-A64EDEFE27E4::net6.0::PoC.Azure.Tests.ResourceBuilderTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

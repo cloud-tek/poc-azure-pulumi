@@ -1,0 +1,36 @@
+namespace PoC.Azure.Deployment;
+
+public enum ResourceType
+{
+  Aks,
+  ApplicationInsights,
+  AppServicePlan,
+  AutomationAccount,
+  BatchAccount,
+  CosmosDb,
+  EventHub,
+  EventGrid,
+  FunctionApp,
+  ContainerInstance,
+  SubnetDelegation,
+  NetworkProfile,
+  ServiceBus,
+  ManagedIdentity,
+  KeyVault,
+  LogAnalytics,
+  ContainerRegistry,
+  PrivateDnsZone,
+  PrivateEndpoint,
+  MsSql,
+  MsSqlDatabase,
+  MsSqlElasticPool,
+  MsSqlServer,
+  NetworkSecurityGroup,
+  PgSql,
+  PgSqlFlexibleServer,
+  ResourceGroup,
+  RouteTable,
+  StorageAccount,
+  VirtualMachine,
+  VirtualNetwork
+}
