@@ -88,7 +88,32 @@ Using raw pulumi DSL will not work on large scale, but still permits raw usage i
 
 When referencing Azure resources (like adding a secret to a keyvault), both the resource group and a resource are needed. A TResource does not expose a ResourceGroup property, even though it is required at creation time. Therefore, the builder needs to return a tuple containing both the resource group and the resource.
 
-*See: PoC.Deployment.Storage**
+**Problem**
+
+```csharp
+var secret = new Secret(
+  key,
+  new SecretArgs()
+  {
+    SecretName = key,
+    VaultName = vault.Vault,                    // Needs vault's name
+    ResourceGroupName = vault.ResourceGroup,    // Needs vault's rgp
+    Properties = new SecretPropertiesArgs()
+    {
+      Value = ListStorageAccountKeys.Invoke(new ListStorageAccountKeysInvokeArgs()
+      {
+        ResourceGroupName = storage.ResourceGroup.Name,
+        AccountName = storage.Resource.Name
+      }).Apply(x => x.Keys[primary ? 0 : 1].Value)
+    }
+  },
+  new CustomResourceOptions()
+  {
+    Protect = protect
+  });
+```
+
+**Solution: See PoC.Deployment.Storage**
 
 ```csharp
 var kvRef = new StackReference($"organization/PoC.Deployment.KeyVault/{Pulumi.Deployment.Instance.StackName}");
