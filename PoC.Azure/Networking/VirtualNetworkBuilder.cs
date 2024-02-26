@@ -18,8 +18,8 @@ public class VirtualNetworkBuilder : AzureResourceBuilder<VirtualNetwork>
 
   private IDictionary<string, string> SubNets = default!;
 
-  private RouteTable RouteTable = null;
-  private NetworkSecurityGroup Nsg = null;
+  private RouteTable RouteTable = null!;
+  private NetworkSecurityGroup Nsg = null!;
 
   public VirtualNetworkBuilder WithAddressPrefixes(string[] addressPrefixes)
   {

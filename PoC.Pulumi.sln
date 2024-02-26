@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.Azure", "PoC.Azure\PoC.Azure.csproj", "{9CACC80F-2152-44B4-A4A3-54F5CE2A6701}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.Deployment.Aks", "PoC.Deployment.Aks\PoC.Deployment.Aks.csproj", "{E77E042C-1FD5-47E7-97C1-3C3ED13B3870}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.Deployment.Default", "PoC.Deployment.Default\PoC.Deployment.Default.csproj", "{E77E042C-1FD5-47E7-97C1-3C3ED13B3870}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.Deployment.Storage", "PoC.Deployment.Storage\PoC.Deployment.Storage.csproj", "{446D354E-55E0-4DE0-9076-7B9DEC5BAA12}"
 EndProject

@@ -13,10 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8787a689-051f-4d16-aea2-f6cc588999fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/PoC.Azure/Networking/VirtualNetworkBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure/Networking/VirtualNetworkBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoC.Azure/obj/Debug/net6.0/PoC.Azure.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure/obj/Debug/net6.0/PoC.Azure.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoC.Azure/obj/Debug/net6.0/PoC.Azure.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure/obj/Debug/net6.0/PoC.Azure.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoC.Deployment.Network/NetworkStack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Deployment.Network/NetworkStack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/build/Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +63,7 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/PoC.Deployment.Aks/PoC.Deployment.Aks.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/PoC.Deployment.Default/PoC.Deployment.Default.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
