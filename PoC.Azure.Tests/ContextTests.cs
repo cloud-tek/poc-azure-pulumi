@@ -23,7 +23,7 @@ public class ContextTests
     const string? otherDescription = "01";
 
     // Initialize the context to the sub/env and primary region + module
-    using (Context.Initialize(Subscription.Xyz, Environment.Xyz, Region.WestEurope, module))
+    using (Context.Initialize(Environment.Xyz, Region.WestEurope, module))
     {
       Context.Current.Should().NotBeNull();
       Context.Current.Environment.Should().Be(Environment.Xyz);

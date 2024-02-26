@@ -27,7 +27,7 @@ public class Context : IDisposable
     _state.Value = new ContextState(location, environment, module, description);
   }
 
-  public static Context Initialize(Subscription subscription, Environment environment, Region location, string module)
+  public static Context Initialize(Environment environment, Region location, string module)
   {
     return new Context(environment, location, module);
   }

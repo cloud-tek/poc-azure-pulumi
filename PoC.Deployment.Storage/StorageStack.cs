@@ -18,7 +18,7 @@ public class StorageStack : Stack
     // Access an output from the other stack
     //var databasePassword = otherStack.GetOutputAsync<string>("DatabasePassword");
 
-    using (Context.Initialize(Subscription.Dev, Environment.Dev, Region.PolandCentral, "data"))
+    using (Context.Initialize(Environment.Dev, Region.PolandCentral, "data"))
     {
       var rgp = new ResourceGroupBuilder()
         .DisableProtection()
