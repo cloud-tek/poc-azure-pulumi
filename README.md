@@ -12,7 +12,7 @@
 
 ## Conclusions
 
-- 1 stack = 1 rgp, unable to share RGP across stacks
+### 1 stack = 1 rgp, unable to share RGP across stacks
 
 ```
 Updating (dev):
@@ -27,4 +27,47 @@ Diagnostics:
 
   pulumi:pulumi:Stack (PoC.Deployment.Storage-dev):
     error: update failed
+```
+
+### State & StackReferences
+
+At the moment I don't know if it's possible to reference resources from other state(s).
+
+The state file is a container for all deployed stacks.
+They can be listed using the CLI
+
+```bash
+pulumi stack ls --all
+NAME                                      LAST UPDATE    RESOURCE COUNT
+organization/PoC.Deployment.KeyVault/dev  5 minutes ago  5
+organization/PoC.Deployment.Network/dev   5 minutes ago  10
+organization/PoC.Deployment.Storage/dev   4 minutes ago  9
+```
+
+### Using builders
+
+Using raw pulumi DSL will not work on large scale, but still permits raw usage if one wishes to.
+
+### returning (ResourceGroup, TResource)
+
+When referencing Azure resources (like adding a secret to a keyvault), both the resource group and a resource are needed. A TResource does not expose a ResourceGroup property, even though it is required at creation time. Therefore, the builder needs to return a tuple containing both the resource group and the resource.
+
+*See: PoC.Deployment.Storage**
+
+```csharp
+var kvRef = new StackReference($"organization/PoC.Deployment.KeyVault/{Pulumi.Deployment.Instance.StackName}");
+    var vaultRef = (
+      ResourceGroup: kvRef.RequireOutput("ResourceGroupName").Apply(x => x.ToString())!,
+      Resource: kvRef.RequireOutput("Name").Apply(x => x.ToString())!);
+
+
+var storage = new StorageAccountBuilder()
+  .In(rgp)
+  .WithSKU(SkuName.Standard_LRS)
+  .DisableProtection()
+  .Build();
+
+  storage
+    .AddPrimaryKeyToKeyVault(vaultRef!, "data-PrimaryKey")
+    .AddSecondaryKeyToKeyVault(vaultRef!, "data-SecondaryKey");
 ```
