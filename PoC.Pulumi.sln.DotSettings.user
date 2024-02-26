@@ -5,5 +5,8 @@
     &lt;TestId&gt;xUnit::9BCF8983-3E79-41CA-A472-A64EDEFE27E4::net6.0::PoC.Azure.Tests.ResourceBuilderTests.X&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::9BCF8983-3E79-41CA-A472-A64EDEFE27E4::net6.0::PoC.Azure.Tests.ResourceBuilderTests.XGivenResourceGroupBuilder_WhenNoContext_ThenThrowsInvalidOperationException&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::9BCF8983-3E79-41CA-A472-A64EDEFE27E4::net6.0::PoC.Azure.Tests.ResourceBuilderTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::2255FF5C-D58F-4DAD-B138-E5BC2083B42E::net8.0::PoC.Deployment.KeyVault.Tests.UnitTest1.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::2255FF5C-D58F-4DAD-B138-E5BC2083B42E::net8.0::PoC.Deployment.KeyVault.Tests.UnitTest1.Test2&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::2255FF5C-D58F-4DAD-B138-E5BC2083B42E::net8.0::PoC.Deployment.KeyVault.Tests.StackTests.Test1&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

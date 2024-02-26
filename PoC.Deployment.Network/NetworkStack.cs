@@ -33,7 +33,7 @@ public class NetworkStack : Stack
 
   public NetworkStack()
   {
-    using (Context.Initialize(Subscription.Dev, Environment.Dev, Region.PolandCentral, "network"))
+    using (Context.Initialize(Environment.Dev, Region.PolandCentral, "network"))
     {
       var rgp = new ResourceGroupBuilder()
         .DisableProtection()

@@ -1,6 +1,7 @@
 using PoC.Azure.Deployment;
 using Pulumi;
 using Pulumi.AzureNative.Resources;
+using Environment = PoC.Azure.Deployment.Environment;
 
 namespace PoC.Azure;
 
@@ -37,9 +38,13 @@ public abstract class ResourceBuilder
 
   protected static string GenerateDefaultResourceName(ResourceType resourceType)
   {
+    var env = Context.Current.Environment == Environment.Lcl
+      ? Pulumi.Deployment.Instance.StackName.ToLowerInvariant()
+      : Context.Current.Environment.ToString().ToLowerInvariant();
+
     var result = Constants.ResourceAbbreviations[resourceType].IsNullOrEmpty()
-      ? $"{Constants.RegionAbbreviations[Context.Current.Location]}-{Context.Current.Module}-{Context.Current.Environment.ToString().ToLowerInvariant()}"
-      : $"{Constants.RegionAbbreviations[Context.Current.Location]}-{Context.Current.Module}-{Context.Current.Environment.ToString().ToLowerInvariant()}-{Constants.ResourceAbbreviations[resourceType].ToLowerInvariant()}";
+      ? $"{Constants.RegionAbbreviations[Context.Current.Location]}-{Context.Current.Module}-{env}"
+      : $"{Constants.RegionAbbreviations[Context.Current.Location]}-{Context.Current.Module}-{env}-{Constants.ResourceAbbreviations[resourceType].ToLowerInvariant()}";
 
     if(resourceType == ResourceType.StorageAccount)
       result = result.Replace("-", "0");
