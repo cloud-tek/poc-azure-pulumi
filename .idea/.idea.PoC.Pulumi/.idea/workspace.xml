@@ -11,9 +11,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8787a689-051f-4d16-aea2-f6cc588999fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/PoC.Azure/Networking/VirtualNetworkBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure/Networking/VirtualNetworkBuilder.cs" afterDir="false" />
-    </list>
+    <list default="true" id="8787a689-051f-4d16-aea2-f6cc588999fb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

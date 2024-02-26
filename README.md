@@ -29,6 +29,34 @@ Diagnostics:
     error: update failed
 ```
 
+### Stack Ids
+
+- Pulumi stack id consists of: `{organization}/{namespace}/{stack-name}`
+- Deployed Pulumi Stacks can be listed using `pulumi ls`
+
+```
+pulumi stack ls --all
+NAME                                                 LAST UPDATE   RESOURCE COUNT
+organization/PoC.Deployment.KeyVault.Tests/ayigieuv  7 hours ago   0
+organization/PoC.Deployment.KeyVault.Tests/eemoycch  7 hours ago   1
+organization/PoC.Deployment.KeyVault.Tests/fdthriur  n/a           n/a
+organization/PoC.Deployment.KeyVault.Tests/ierjdqqo  n/a           n/a
+organization/PoC.Deployment.KeyVault.Tests/kcduhbwb  n/a           n/a
+organization/PoC.Deployment.KeyVault.Tests/qljaatrl  7 hours ago   0
+organization/PoC.Deployment.KeyVault.Tests/qnwbwbxe  6 hours ago   0
+organization/PoC.Deployment.KeyVault.Tests/sxkyebcq  n/a           n/a
+organization/PoC.Deployment.KeyVault.Tests/zjgffzrp  7 hours ago   1
+organization/PoC.Deployment.KeyVault/dev             23 hours ago  5
+organization/PoC.Deployment.Network/dev              23 hours ago  10
+organization/PoC.Deployment.Storage/dev              23 hours ago  9
+```
+
+### Configurability
+
+- Native Pulumi configuration originates from the `Pulumi.*.yaml` files
+- Native Pulumi secrets originate from the `Pulumi.*.yaml` files and are kept under source control (encrypted)
+- It is possible to use `IConfiguration` when using dotnet
+
 ### State & StackReferences
 
 At the moment I don't know if it's possible to reference resources from other state(s).
@@ -43,6 +71,14 @@ organization/PoC.Deployment.KeyVault/dev  5 minutes ago  5
 organization/PoC.Deployment.Network/dev   5 minutes ago  10
 organization/PoC.Deployment.Storage/dev   4 minutes ago  9
 ```
+
+### Orchestrating stack deployments
+
+Complex deployment of multiple stacks (like a full-env deployment) can be achieved in 2 ways:
+- [Pulumi.AutoDeploy](https://www.pulumi.com/registry/packages/auto-deploy/)
+- [NUKE](https://www.techwatching.dev/posts/when-pulumi-met-nuke?fbclid=IwAR2It7Nn-WJBAuxiDRgpKJ5XvTkMp5sHZofpS4p9NSCgMMA5urQUJy2OOo0)
+
+This repo contains a NUKE sample deploying some infrastructure
 
 ### Using builders
 
