@@ -33,10 +33,10 @@ public static class ResourceBuilderExtensions
     return builder;
   }
 
-  public static TResourceBuilder DisableProtection<TResourceBuilder>(this TResourceBuilder builder)
+  public static TResourceBuilder SetProtection<TResourceBuilder>(this TResourceBuilder builder, bool value = true)
     where TResourceBuilder : ResourceBuilder
   {
-    builder.Protect = false;
+    builder.Protect = value;
 
     return builder;
   }

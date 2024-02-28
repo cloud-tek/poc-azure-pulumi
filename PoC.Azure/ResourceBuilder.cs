@@ -36,15 +36,19 @@ public abstract class ResourceBuilder
     return resourceGroup;
   }
 
-  protected static string GenerateDefaultResourceName(ResourceType resourceType)
+  public static string GenerateDefaultResourceName(ResourceType resourceType)
   {
     var env = Context.Current.Environment == Environment.Lcl
       ? Pulumi.Deployment.Instance.StackName.ToLowerInvariant()
       : Context.Current.Environment.ToString().ToLowerInvariant();
 
-    var result = Constants.ResourceAbbreviations[resourceType].IsNullOrEmpty()
-      ? $"{Constants.RegionAbbreviations[Context.Current.Location]}-{Context.Current.Module}-{env}"
-      : $"{Constants.RegionAbbreviations[Context.Current.Location]}-{Context.Current.Module}-{env}-{Constants.ResourceAbbreviations[resourceType].ToLowerInvariant()}";
+    var result = resourceType switch
+    {
+      ResourceType.ResourceGroup => $"{Context.Current.Module}-{env}",
+      _ => Constants.ResourceAbbreviations[resourceType].IsNullOrEmpty()
+        ? $"{Context.Current.Module}-{env}-{Constants.RegionAbbreviations[Context.Current.Location]}"
+        : $"{Context.Current.Module}-{Constants.ResourceAbbreviations[resourceType].ToLowerInvariant()}-{env}-{Constants.RegionAbbreviations[Context.Current.Location]}"
+    };
 
     if(resourceType == ResourceType.StorageAccount)
       result = result.Replace("-", "0");

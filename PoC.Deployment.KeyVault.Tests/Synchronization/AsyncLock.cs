@@ -16,7 +16,7 @@ public class AsyncLock
     var wait = _semaphore.WaitAsync();
     return wait.IsCompleted
       ? _releaser
-      : wait.ContinueWith((_, state) => new AsyncLockReleaser((AsyncLock)state),
+      : wait.ContinueWith((_, state) => new AsyncLockReleaser((AsyncLock)state!),
         this, CancellationToken.None,
         TaskContinuationOptions.ExecuteSynchronously, TaskScheduler.Default);
   }

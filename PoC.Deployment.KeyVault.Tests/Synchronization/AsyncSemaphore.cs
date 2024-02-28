@@ -18,7 +18,7 @@ internal class AsyncSemaphore
 
   public void Release()
   {
-    TaskCompletionSource<bool> toRelease = null;
+    TaskCompletionSource<bool> toRelease = null!;
     lock (_waiters)
     {
       if (_waiters.Count > 0)

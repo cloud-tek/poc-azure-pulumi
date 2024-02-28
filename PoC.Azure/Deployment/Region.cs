@@ -4,5 +4,6 @@ public enum Region
 {
   WestEurope = 0,
   NorthEurope,
-  PolandCentral
+  PolandCentral,
+  SwedenCentral
 }

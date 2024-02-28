@@ -3,9 +3,6 @@ using Pulumi;
 using Pulumi.AzureNative.Network;
 using Pulumi.AzureNative.Network.Inputs;
 using Pulumi.AzureNative.Resources;
-using NetworkSecurityGroupArgs = Pulumi.AzureNative.Network.Inputs.NetworkSecurityGroupArgs;
-using RouteTableArgs = Pulumi.AzureNative.Network.Inputs.RouteTableArgs;
-using SubnetArgs = Pulumi.AzureNative.Network.SubnetArgs;
 
 namespace PoC.Azure.Networking;
 
@@ -14,43 +11,11 @@ public class VirtualNetworkBuilder : AzureResourceBuilder<VirtualNetwork>
   public VirtualNetworkBuilder() : base(ResourceType.VirtualNetwork)
   { }
 
-  private string[] AddressPrefixes = default!;
-
-  private IDictionary<string, string> SubNets = default!;
-
-  private RouteTable RouteTable = null!;
-  private NetworkSecurityGroup Nsg = null!;
+  private string[] _addressPrefixes = default!;
 
   public VirtualNetworkBuilder WithAddressPrefixes(string[] addressPrefixes)
   {
-    AddressPrefixes = addressPrefixes;
-    return this;
-  }
-
-  public VirtualNetworkBuilder WithSubnets(IDictionary<string, string> subnets)
-  {
-    SubNets = subnets;
-    return this;
-  }
-  public VirtualNetworkBuilder WithNetworkSecurityGroup((ResourceGroup ResourceGroup, NetworkSecurityGroup Resource) nsg)
-  {
-    return WithNetworkSecurityGroup(nsg.Resource);
-  }
-
-  public VirtualNetworkBuilder WithNetworkSecurityGroup(NetworkSecurityGroup nsg)
-  {
-    Nsg = nsg;
-    return this;
-  }
-
-  public VirtualNetworkBuilder WithRouteTable((ResourceGroup ResourceGroup, RouteTable Resource) table)
-  {
-    return WithRouteTable(table.Resource);
-  }
-
-  public VirtualNetworkBuilder WithRouteTable(RouteTable table)
-  {
-    RouteTable = table;
+    _addressPrefixes = addressPrefixes;
     return this;
   }
 
@@ -62,7 +27,7 @@ public class VirtualNetworkBuilder : AzureResourceBuilder<VirtualNetwork>
     {
       AddressSpace = new AddressSpaceArgs()
       {
-        AddressPrefixes = AddressPrefixes ?? throw new InvalidOperationException()
+        AddressPrefixes = _addressPrefixes ?? throw new InvalidOperationException()
       },
       Location = Context.Current.Location.ToString(),
       VirtualNetworkName = Name,
@@ -70,28 +35,6 @@ public class VirtualNetworkBuilder : AzureResourceBuilder<VirtualNetwork>
     }, new CustomResourceOptions()
     {
       Protect = Protect
-    });
-
-    SubNets.ForEach(kvp =>
-    {
-      var subnet = new Subnet(kvp.Key, new SubnetArgs()
-      {
-        SubnetName = kvp.Key,
-        AddressPrefix = kvp.Value,
-        ResourceGroupName = resourceGroup.Name,
-        VirtualNetworkName = virtualNetwork.Name,
-        NetworkSecurityGroup = Nsg != null ? new NetworkSecurityGroupArgs()
-        {
-          Id = Nsg.Id
-        } : null,
-        RouteTable = RouteTable != null ? new RouteTableArgs()
-        {
-          Id = RouteTable.Id
-        } : null
-      }, new CustomResourceOptions()
-      {
-        Protect = Protect
-      });
     });
 
     return (resourceGroup, virtualNetwork);
