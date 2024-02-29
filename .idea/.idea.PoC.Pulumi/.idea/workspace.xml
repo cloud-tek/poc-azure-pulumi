@@ -12,9 +12,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8787a689-051f-4d16-aea2-f6cc588999fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PoC.Azure/StackReference.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PoC.Pulumi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PoC.Pulumi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Azure.Tests/ResourceBuilderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure.Tests/ResourceBuilderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Azure.Tests/TestResourceBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure.Tests/TestResourceBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Azure/KeyVault/KeyVaultBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure/KeyVault/KeyVaultBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Azure/Networking/NetworkSecurityGroupBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure/Networking/NetworkSecurityGroupBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Azure/Networking/RouteTableBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure/Networking/RouteTableBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Azure/Networking/VirtualNetworkBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure/Networking/VirtualNetworkBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Azure/ResourceBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure/ResourceBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Azure/ResourceBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure/ResourceBuilderExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Azure/ResourceGroupBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure/ResourceGroupBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Azure/Storage/StorageAccountBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Azure/Storage/StorageAccountBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Deployment.KeyVault/KeyVaultStack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Deployment.KeyVault/KeyVaultStack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Deployment.Network/NetworkStack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Deployment.Network/NetworkStack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PoC.Deployment.Storage/StorageStack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Deployment.Storage/StorageStack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoC.Pulumi.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/PoC.Pulumi.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +35,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e477dc2fa8ad464d9095f8606a5cca3f4b83800/6f/70c0e2a0/VirtualNetwork.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/17534e21e6b4f3c851ea2a19e9daf3b3698f5a38364d596429586d4b51728/Resource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6ff21dd5a6e094f36ee683f0a1778b5d1d329892b6e6fd73ca4f9492191bca/CustomResource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e192646b47ab66ec4dfdbe4ed3aa733a56a8897c76b466e458f68f2b959594c/OutputCompletionSource.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,7 +58,7 @@
     &quot;43f55cca-0270-4edd-9cb6-0dfce5b697cd.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/multi-region&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -157,7 +175,10 @@
       <option name="presentableId" value="Default" />
       <updated>1708936669400</updated>
       <workItem from="1708936671527" duration="13888000" />
-      <workItem from="1709017721889" duration="1916000" />
+      <workItem from="1709017721889" duration="5025000" />
+      <workItem from="1709071709176" duration="1187000" />
+      <workItem from="1709073167071" duration="9769000" />
+      <workItem from="1709110494285" duration="4576000" />
     </task>
     <servers />
   </component>

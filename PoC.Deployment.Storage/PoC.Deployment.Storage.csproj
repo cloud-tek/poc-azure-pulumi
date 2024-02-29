@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PoC.Azure\PoC.Azure.csproj" />
     <ProjectReference Include="..\PoC.Deployment.KeyVault\PoC.Deployment.KeyVault.csproj" />
+    <ProjectReference Include="..\PoC.Deployment.Network\PoC.Deployment.Network.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,7 +7,7 @@ namespace PoC.Azure.Networking;
 
 public class NetworkSecurityGroupBuilder : AzureResourceBuilder<NetworkSecurityGroup>
 {
-  public NetworkSecurityGroupBuilder() : base(ResourceType.NetworkSecurityGroup)
+  public NetworkSecurityGroupBuilder(bool protect = true) : base(ResourceType.NetworkSecurityGroup, protect)
   {
   }
 

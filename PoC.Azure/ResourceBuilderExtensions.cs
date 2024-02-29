@@ -32,12 +32,4 @@ public static class ResourceBuilderExtensions
     builder.Location = location;
     return builder;
   }
-
-  public static TResourceBuilder DisableProtection<TResourceBuilder>(this TResourceBuilder builder)
-    where TResourceBuilder : ResourceBuilder
-  {
-    builder.Protect = false;
-
-    return builder;
-  }
 }

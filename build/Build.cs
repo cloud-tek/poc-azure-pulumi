@@ -1,3 +1,4 @@
+using System.Linq;
 using Nuke.Common;
 using Nuke.Common.ProjectModel;
 using Nuke.Common.Tooling;
@@ -64,10 +65,24 @@ class Build : NukeBuild
             .SetProcessEnvironmentVariable(PulumiPassphraseEnvVar, string.Empty)
           );
         });
-        // return PulumiStackOutput(_ => _
-        //     .SetCwd(Solution.Directory)
-        //     .EnableShowSecrets()
-        //     .DisableProcessLogOutput())
-        //   .StdToText();
+      });
+
+    Target Destroy => _ => _
+      .DependsOn(Compile)
+      .Executes(() =>
+      {
+
+        Stacks.Reverse().ForEach(stack =>
+        {
+          PulumiStackSelect(_ => _
+            .SetStackName("dev")
+            .SetCwd(Solution.Directory / stack)
+          );
+          PulumiDestroy(_ => _
+            .SetYes(true)
+            .SetCwd(Solution.Directory / stack)
+            .SetProcessEnvironmentVariable(PulumiPassphraseEnvVar, string.Empty)
+          );
+        });
       });
 }

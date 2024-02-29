@@ -14,7 +14,7 @@ public class KeyVaultBuilder : AzureResourceBuilder<Vault>
   private bool _enableSoftDelete = false;
   private List<AccessPolicyEntryArgs> _accessPolicies = new List<AccessPolicyEntryArgs>();
 
-  public KeyVaultBuilder() : base(ResourceType.KeyVault)
+  public KeyVaultBuilder(bool protect = true) : base(ResourceType.KeyVault, protect)
   {
   }
 

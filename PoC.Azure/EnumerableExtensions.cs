@@ -14,4 +14,21 @@ public static class EnumerableExtensions
 
     return enumerable;
   }
+
+  public static IDictionary<TKey, TValue> ReverseLookup<TKey, TValue>(this IEnumerable<TValue> values,
+    IDictionary<TKey, TValue> source)
+  {
+    var result = new Dictionary<TKey, TValue>();
+
+    foreach (var value in values)
+    {
+      var key = source.FirstOrDefault(x => x.Value!.Equals(value)).Key;
+      if (key != null)
+      {
+        result[key] = value;
+      }
+    }
+
+    return result;
+  }
 }

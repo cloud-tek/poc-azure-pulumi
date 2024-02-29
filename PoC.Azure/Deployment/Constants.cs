@@ -8,7 +8,8 @@ internal static class Constants
   internal static IDictionary<Region, string> RegionAbbreviations = new ReadOnlyDictionary<Region, string>(new Dictionary<Region, string>() {
     { Region.WestEurope,  "euw" },
     { Region.NorthEurope,  "eun" },
-    { Region.PolandCentral, "plc" }
+    { Region.PolandCentral, "plc" },
+    { Region.SwedenCentral, "swe" }
   });
 
   internal static IDictionary<ResourceType, string> ResourceAbbreviations =
