@@ -13,7 +13,12 @@ public abstract class ResourceBuilder
 
   internal string Name { get; set; } = default!;
 
-  internal bool Protect { get; set; } = true;
+  internal bool Protect { get; set; }
+
+  protected ResourceBuilder(bool protect)
+  {
+    Protect = protect;
+  }
 
   protected ResourceGroup GetResourceGroup()
   {
@@ -60,7 +65,8 @@ public abstract class ResourceBuilder
 public abstract class ResourceBuilder<TResource> : ResourceBuilder
   where TResource : CustomResource
 {
-  protected ResourceBuilder(ResourceType resourceType)
+  protected ResourceBuilder(ResourceType resourceType, bool protect)
+    : base(protect)
   {
     ResourceType = resourceType;
     Name = GenerateDefaultResourceName(resourceType);
@@ -72,7 +78,8 @@ public abstract class ResourceBuilder<TResource> : ResourceBuilder
 public abstract class AzureResourceBuilder<TResource> : ResourceBuilder
   where TResource : CustomResource
 {
-  protected AzureResourceBuilder(ResourceType resourceType)
+  protected AzureResourceBuilder(ResourceType resourceType, bool protect)
+    : base(protect)
   {
     ResourceType = resourceType;
     Name = GenerateDefaultResourceName(ResourceType);

@@ -8,7 +8,7 @@ namespace PoC.Azure.Networking;
 
 public class VirtualNetworkBuilder : AzureResourceBuilder<VirtualNetwork>
 {
-  public VirtualNetworkBuilder() : base(ResourceType.VirtualNetwork)
+  public VirtualNetworkBuilder(bool protect = true) : base(ResourceType.VirtualNetwork, protect)
   { }
 
   private string[] _addressPrefixes = default!;

@@ -22,7 +22,6 @@ public partial class NetworkStack : Stack
     using (Context.Initialize(Pulumi.Deployment.Instance.StackName.ToEnvironment(), Region.PolandCentral, "network"))
     {
       var rgp = new ResourceGroupBuilder()
-        .SetProtection()
         .Build();
 
       CreateNetwork(rgp, (id) => { outputs[Context.Current.Location] = id; }, protect: protect);
@@ -51,20 +50,17 @@ public partial class NetworkStack : Stack
 
   private void CreateNetwork(ResourceGroup rgp, Action<Output<string>> output, bool protect)
   {
-    var nsg = new NetworkSecurityGroupBuilder()
+    var nsg = new NetworkSecurityGroupBuilder(protect: protect)
       .In(rgp)
-      .SetProtection(protect)
       .Build();
 
-    var routeTable = new RouteTableBuilder()
+    var routeTable = new RouteTableBuilder(protect: protect)
       .In(rgp)
-      .SetProtection(protect)
       .Build();
 
-    var network = new VirtualNetworkBuilder()
+    var network = new VirtualNetworkBuilder(protect: protect)
       .In(rgp)
       .WithAddressPrefixes(Prefixes[Context.Current.Environment][Context.Current.Location])
-      .SetProtection()
       .Build();
 
     Subnets[Context.Current.Environment][Context.Current.Location].ForEach(kvp =>

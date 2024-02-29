@@ -7,7 +7,7 @@ namespace PoC.Azure.Networking;
 
 public class RouteTableBuilder : AzureResourceBuilder<RouteTable>
 {
-  public RouteTableBuilder() : base(ResourceType.RouteTable)
+  public RouteTableBuilder(bool protect = true) : base(ResourceType.RouteTable, protect)
   { }
   public override (ResourceGroup ResourceGroup, RouteTable Resource) Build()
   {

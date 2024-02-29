@@ -6,7 +6,7 @@ namespace PoC.Azure;
 
 public class ResourceGroupBuilder : ResourceBuilder<ResourceGroup>
 {
-  public ResourceGroupBuilder() : base(ResourceType.ResourceGroup)
+  public ResourceGroupBuilder(bool protect = true) : base(ResourceType.ResourceGroup, protect)
   {
     ResourceGroupName = GenerateDefaultResourceName(ResourceType);
   }

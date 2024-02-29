@@ -15,16 +15,14 @@ public class KeyVaultStack : Stack
     const bool protect = true;
     using (Context.Initialize(Pulumi.Deployment.Instance.StackName.ToEnvironment(), Region.PolandCentral, "secret"))
     {
-      var rgp = new ResourceGroupBuilder()
-        .SetProtection(protect)
+      var rgp = new ResourceGroupBuilder(protect: protect)
         .Build();
 
-      var kv = new KeyVaultBuilder()
+      var kv = new KeyVaultBuilder(protect: protect)
         .In(rgp)
         .InTenant(config.Require("azure.tenantId"))
         .WithPermissiveAccessPolicy("2b40e175-72b6-4243-a20d-869b15a4605c")
         .WithSoftDelete(false)
-        .SetProtection()
         .Build();
 
       Name = kv.Resource.Name;

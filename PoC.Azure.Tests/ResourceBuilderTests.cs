@@ -13,7 +13,6 @@ public class ResourceBuilderTests
     var action = new Action(() =>
     {
       var rgp = new ResourceGroupBuilder()
-        .SetProtection()
         .Build();
     });
 
@@ -28,7 +27,6 @@ public class ResourceBuilderTests
       using (Context.Initialize(Environment.Dev, Region.PolandCentral, "data"))
       {
         var resource = new TestResourceBuilder()
-          .SetProtection()
           .Build();
       }
     });

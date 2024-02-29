@@ -8,5 +8,6 @@
     &lt;TestId&gt;xUnit::2255FF5C-D58F-4DAD-B138-E5BC2083B42E::net8.0::PoC.Deployment.KeyVault.Tests.UnitTest1.Test1&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::2255FF5C-D58F-4DAD-B138-E5BC2083B42E::net8.0::PoC.Deployment.KeyVault.Tests.UnitTest1.Test2&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::2255FF5C-D58F-4DAD-B138-E5BC2083B42E::net8.0::PoC.Deployment.KeyVault.Tests.StackTests.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::2255FF5C-D58F-4DAD-B138-E5BC2083B42E::net8.0::PoC.Deployment.KeyVault.Tests.StackTests.GivenValidWorkspaceStack_WhenPulumiUp_ThenUpdateSucceededAndValidOutputs&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

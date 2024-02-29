@@ -6,7 +6,7 @@ namespace PoC.Azure.Tests;
 
 public class TestResourceBuilder : AzureResourceBuilder<StorageAccount>
 {
-  public TestResourceBuilder() : base(ResourceType.StorageAccount)
+  public TestResourceBuilder() : base(ResourceType.StorageAccount, false)
   {
 
   }

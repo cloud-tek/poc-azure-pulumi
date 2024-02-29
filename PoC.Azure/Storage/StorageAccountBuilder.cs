@@ -12,14 +12,9 @@ public class StorageAccountBuilder : AzureResourceBuilder<StorageAccount>
   private SkuName Sku { get; set; }
   private PublicNetworkAccess PublicNetworkAccess { get; set; } = PublicNetworkAccess.Disabled;
 
-  public StorageAccountBuilder() : base(ResourceType.StorageAccount)
-  {
-  }
-
-  public StorageAccountBuilder WithSKU(SkuName sku)
+  public StorageAccountBuilder(SkuName sku, bool protect = true) : base(ResourceType.StorageAccount, protect)
   {
     Sku = sku;
-    return this;
   }
 
   public StorageAccountBuilder EnablePublicNetworkAccess()
