@@ -23,18 +23,14 @@ public class StorageStack : Stack
       ResourceGroup: kv.RequireOutput(x => x.ResourceGroupName),
       Resource: kv.RequireOutput(x => x.Name));
 
-    const bool protect = true;
+    const bool protect = false;
     using (Context.Initialize(Environment.Dev, Region.PolandCentral, "data"))
     {
-      var rgp = new ResourceGroupBuilder()
-        .SetProtection(protect)
+      var rgp = new ResourceGroupBuilder(protect: protect)
         .Build();
 
-      var storage = new StorageAccountBuilder()
+      var storage = new StorageAccountBuilder(SkuName.Standard_LRS, protect: protect)
         .In(rgp)
-        .WithSKU(SkuName.Standard_LRS)
-
-        .SetProtection(protect)
         .Build();
 
       storage
