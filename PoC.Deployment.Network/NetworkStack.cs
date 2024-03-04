@@ -16,12 +16,12 @@ public partial class NetworkStack : Stack
 {
   public NetworkStack()
   {
-    const bool protect = true;
+    const bool protect = false;
     var outputs = new Dictionary<Region, Output<string>>();
 
     using (Context.Initialize(Pulumi.Deployment.Instance.StackName.ToEnvironment(), Region.PolandCentral, "network"))
     {
-      var rgp = new ResourceGroupBuilder()
+      var rgp = new ResourceGroupBuilder(protect: protect)
         .Build();
 
       CreateNetwork(rgp, (id) => { outputs[Context.Current.Location] = id; }, protect: protect);

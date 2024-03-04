@@ -12,7 +12,7 @@ public class KeyVaultStack : Stack
   {
     var config = new Config();
 
-    const bool protect = true;
+    const bool protect = false;
     using (Context.Initialize(Pulumi.Deployment.Instance.StackName.ToEnvironment(), Region.PolandCentral, "secret"))
     {
       var rgp = new ResourceGroupBuilder(protect: protect)

@@ -1,5 +1,9 @@
-[Bb]in/
-[Oo]bj/
-.user
+.idea/
 .nuke/temp/
 .nuke/build.schema.json
+.user
+
+[Bb]in/
+[Oo]bj/
+
+*.used
